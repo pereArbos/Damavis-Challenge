@@ -26,13 +26,13 @@ currentPaths = [initialPosition]
 numberOfMoves = 0
 finish = False
 
-# loop finishes if goal is reached or ther is no path left that can reach it
+# loop finishes if goal is reached or there is no path left that can reach it
 while (not finish):
     numberOfMoves += 1
     newPaths = []
     
     for path in currentPaths:
-        # calculate all new possible positiotns for every path
+        # calculate all new possible positions for every path
         newPositions = getPositionsAfterMoving(labyrinth, path['orientation'], path['head'])
         for position in newPositions:
             if position['head'] == goal:
